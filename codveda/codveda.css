@@ -1,0 +1,687 @@
+/* ============================================
+   CODVEDA — Amerix Men's Health & Wellness
+   Aesthetic: Dark industrial / military precision
+   Fonts: Oswald (headings) + Lato (body)
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Lato:wght@300;400;700&display=swap');
+
+/* ── CSS Variables ── */
+:root {
+  --black:      #0a0a0a;
+  --dark:       #111111;
+  --mid:        #1c1c1c;
+  --panel:      #242424;
+  --border:     #2e2e2e;
+  --gold:       #c8a84b;
+  --gold-light: #e6c96e;
+  --white:      #f5f5f0;
+  --muted:      #9a9a8e;
+  --danger:     #8b1a1a;
+
+  --font-head: 'Oswald', sans-serif;
+  --font-body: 'Lato', sans-serif;
+
+  --radius: 2px;
+  --transition: 0.3s ease;
+}
+
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-head);
+}
+
+/* ── HEADER / NAV ── */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--black);
+  border-bottom: 1px solid var(--border);
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav h1 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+nav ul {
+  display: flex;
+  gap: 2.5rem;
+}
+
+nav ul li a {
+  font-family: var(--font-head);
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color var(--transition);
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width var(--transition);
+}
+
+nav ul li a:hover {
+  color: var(--gold);
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* ── SHARED BUTTON STYLE ── */
+button,
+.submit-btn {
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-family: var(--font-head);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 0.75rem 2rem;
+  transition: background var(--transition), color var(--transition);
+}
+
+button:hover,
+.submit-btn:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+
+/* ── HERO SECTION ── */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 6rem 8vw;
+  background:
+    linear-gradient(to right, rgba(0,0,0,0.9) 50%, rgba(0,0,0,0.3)),
+    url('./download (1).jpg') center/cover no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,0,0,0.08) 2px,
+    rgba(0,0,0,0.08) 4px
+  );
+  pointer-events: none;
+}
+
+#hero1 {
+  font-family: var(--font-head);
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  color: var(--white);
+  max-width: 700px;
+  margin-bottom: 1.5rem;
+  animation: fadeUp 0.8s ease both;
+}
+
+#hero1 span {
+  color: var(--gold);
+}
+
+.hero p {
+  max-width: 520px;
+  color: var(--muted);
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+  animation: fadeUp 0.8s 0.2s ease both;
+}
+
+.hero button {
+  animation: fadeUp 0.8s 0.4s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── ABOUT SECTION ── */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 80vh;
+  background: var(--dark);
+}
+
+.about1 {
+  overflow: hidden;
+}
+
+.about1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(30%) contrast(1.1);
+  transition: transform 0.6s ease;
+}
+
+.about1:hover img {
+  transform: scale(1.04);
+}
+
+.about2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem 4rem;
+  background: var(--mid);
+  border-left: 3px solid var(--gold);
+}
+
+.about2 h1 {
+  font-family: var(--font-head);
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+.about2 h1::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: var(--gold);
+  margin-top: 0.75rem;
+}
+
+.para {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.9;
+  margin-bottom: 2.5rem;
+}
+
+/* ── SECTION2 (Bio) ── */
+.section2 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0;
+  background: var(--panel);
+  border-top: 1px solid var(--border);
+}
+
+.section3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background: var(--mid);
+  gap: 1.5rem;
+  border-right: 1px solid var(--border);
+}
+
+.section3 img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--gold);
+  filter: grayscale(20%);
+}
+
+.section3 h1 {
+  font-family: var(--font-head);
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-align: center;
+}
+
+.section4 {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.section4 h1 {
+  font-family: var(--font-head);
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+}
+
+.section4 p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.9;
+  max-width: 540px;
+}
+
+/* ── BOOK CLINICS ── */
+article > section:has(> section > h1:first-child) {
+  background: var(--black);
+  padding: 5rem 8vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  border-top: 1px solid var(--border);
+}
+
+article > section:has(> section > h1:first-child) h1 {
+  font-family: var(--font-head);
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 1.5rem;
+}
+
+/* ── CLINIC CARDS (section10) ── */
+.section10 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  background: var(--dark);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.section11 {
+  padding: 3.5rem 2.5rem;
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: background var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.section11::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width 0.4s ease;
+}
+
+.section11:hover {
+  background: var(--mid);
+}
+
+.section11:hover::before {
+  width: 100%;
+}
+
+.section11:last-child {
+  border-right: none;
+}
+
+.section11 img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--panel);
+}
+
+.section11 h1 {
+  font-family: var(--font-head);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.section11 p {
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+/* ── TRUST / SAFE HANDS SECTION ── */
+article > section:last-of-type > section:first-child {
+  background: var(--mid);
+  padding: 5rem 8vw;
+}
+
+article > section:last-of-type > section:first-child h1 {
+  font-family: var(--font-head);
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 1rem;
+}
+
+article > section:last-of-type > section:first-child > p {
+  color: var(--muted);
+  max-width: 560px;
+  margin-bottom: 2rem;
+}
+
+article > section:last-of-type > section:first-child ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+article > section:last-of-type > section:first-child ul li {
+  padding-left: 1.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  border-left: 2px solid var(--gold);
+}
+
+/* ── CONTACT SECTION ── */
+.contact-section {
+  background: var(--dark);
+  padding: 6rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-title {
+  font-family: var(--font-head);
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--white);
+  margin-bottom: 3.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: var(--gold);
+  margin-top: 0.6rem;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.info-title {
+  font-family: var(--font-head);
+  font-size: 1.4rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.info-text {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.contact-item i {
+  color: var(--gold);
+  width: 20px;
+  flex-shrink: 0;
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-family: var(--font-head);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.required {
+  color: var(--gold);
+}
+
+.form-group input,
+.form-group textarea {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius);
+  outline: none;
+  transition: border-color var(--transition);
+  resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #555;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--gold);
+}
+
+.form-submit {
+  display: flex;
+}
+
+.submit-btn {
+  padding: 0.85rem 2.5rem;
+  font-size: 0.8rem;
+}
+
+/* ── FOOTER ── */
+.footer {
+  background: var(--black);
+  border-top: 1px solid var(--border);
+  padding: 3rem 8vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.footer h1 {
+  font-family: var(--font-head);
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.footer p {
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .about1 img {
+    height: 300px;
+    width: 100%;
+  }
+
+  .about2 {
+    padding: 3rem 2rem;
+    border-left: none;
+    border-top: 3px solid var(--gold);
+  }
+
+  .section2 {
+    grid-template-columns: 1fr;
+  }
+
+  .section3 {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section4 {
+    padding: 2.5rem 2rem;
+  }
+
+  .section10 {
+    grid-template-columns: 1fr;
+  }
+
+  .section11 {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  nav ul {
+    gap: 1.2rem;
+  }
+
+  .hero {
+    padding: 4rem 5vw;
+  }
+}
+
+@media (max-width: 600px) {
+  nav h1 {
+    font-size: 1.1rem;
+  }
+
+  nav ul li a {
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+  }
+
+  #hero1 {
+    font-size: 2.5rem;
+  }
+
+  .section4 h1 {
+    font-size: 2rem;
+  }
+}

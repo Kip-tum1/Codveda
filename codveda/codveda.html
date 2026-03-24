@@ -7,28 +7,40 @@
     <title>Codveda</title>
 </head>
 <body>
-    <article>
+    <header>
+        <nav>
+            <h1>My Blog</h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Projects</a></li>
+            </ul>
+        </nav>
+    </header>  
+    <main>
+      <article>
         <section class="hero">
-            <h1>Welcome Everyone</h1>
+            <h1 id="hero1">Welcome Everyone</h1>
             <p>2026 is the year for structure, discipline, and execution. If you are done negotiating with weakness and ready to train, eat, and live with intent then Join our 2026 protocols .</p>
             <button>Contact</button>
         </section>
         <section class="about">
             <section class="about1">
-                <img />
+                <img src="./download (1).jpg" height="400px" width="600px"/>
             </section>
             <section class="about2">
                 <h1>About Us</h1>
-                <p>2026 is the year for structure, discipline, and execution. If you are done negotiating with weakness and ready to train, eat, and live with intent then Join our 2026 protocols </p>
+                <p class="para">2026 is the year for structure, discipline, and execution. If you are done negotiating with weakness and ready to train, eat, and live with intent then Join our 2026 protocols </p>
                 <button>Contact</button>
             </section>
         </section>
-        <section>
-            <section>
-                <img />
-                <h2>MEN'S HEALTH AND WELLNESS</h2>
+        <section class="section2">
+            <section class="section3">
+                <img src="./download (2).jpg" alt="men's health" height="200px" width="200px"/>
+                <h1>MEN'S HEALTH AND WELLNESS</h1>
             </section>
-            <section>
+            <section class="section4">
                 <h1>BIO</h1>
                 <P>
                     Amerix is a reproductive health specialist who promotes a holistic approach to the wellness and welfare of men. Through my unique wellness plans that promote men's health, I have helped men regain their health, pride, self-esteem and a sense of masculinity.
@@ -45,18 +57,18 @@
                 <img />
             </section>
         </section>
-        <section>
-            <section>
+        <section class="section10">
+            <section class="section11">
                 <img/>
                 <h1>Diabetes/Hypertension Clinic</h1>
                 <p>Regain control of your sugar, pressure, and health.</p>
             </section>
-              <section>
+            <section class="section11">
                 <img/>
                 <h1>Nutrition Clinic</h1>
                 <p>Confidential care to restore vitality and confidence.</p>
             </section>
-              <section>
+            <section class="section11">
                 <img/>
                 <h1>Nutrition Clinic</h1>
                 <p>Eat smart, live strong, thrive daily.</p>
@@ -72,26 +84,82 @@
                     <li>100% online Fully private, online consultations (no awkwardly waiting for your turn at the practice, no judgement) at your convenience.</li>
                 </ul>
             </section>
-            <section>
-                <img />
-                <form>
-                    <h1>Enrol to The Amerix Newsletter</h1>
-                    <label>Email(Required)</label>
-                    <input type="text" />
-                    <label>First name(Required)</label>
-                    <input type="text" />
-                    <label>Last name(Required)</label>
-                    <input type="text" />
-                    <button>Submit</button>
-                </form>
-            </section>
+            <section id="contact" class="contact-section">
+    <div class="container">
+      <h2 class="section-title">Contact Me</h2>
+
+      <div class="contact-content">
+        <!-- Left - Info -->
+        <div class="contact-info">
+          <h3 class="info-title">Let's Get In Touch</h3>
+          <p class="info-text">
+            I'm open to discussing web development projects or partnership opportunities.
+          </p>
+
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>duncankipkoech12@gmail.com</span>
+          </div>
+
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <span>+254 769 930 350</span>
+          </div>
+
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Nairobi, Kenya</span>
+          </div>
+        </div>
+
+        <!-- Right - Form -->
+        <div class="contact-form-wrapper">
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input 
+                type="text" 
+                id="name" 
+                placeholder="Enter Your Name" 
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email <span class="required">*</span></label>
+              <input 
+                type="email" 
+                id="email" 
+                placeholder="Enter Your Email" 
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea 
+                id="message" 
+                rows="5" 
+                placeholder="Enter Your Message"
+              ></textarea>
+            </div>
+
+            <div class="form-submit">
+              <button type="submit" class="submit-btn">SEND</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
         </section>
         <footer class="footer">
             <h1>Raizy</h1>
             <p>All rights Reserved©  | Raizy 2026</p>
             <p>All rights Reserved©  | Raizy 2026</p>
         </footer>
-    </article>
+     </article>
+    </main>
     
 </body>
 </html>

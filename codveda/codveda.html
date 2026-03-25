@@ -1,165 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="codveda.css">
-    <title>Codveda</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Amerix – Men's Health & Wellness. Structure, discipline, and execution for 2026." />
+  <link rel="stylesheet" href="codveda.css">
+  <title>Amerix | Men's Health & Wellness</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>My Blog</h1>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Projects</a></li>
-            </ul>
-        </nav>
-    </header>  
-    <main>
-      <article>
-        <section class="hero">
-            <h1 id="hero1">Welcome Everyone</h1>
-            <p>2026 is the year for structure, discipline, and execution. If you are done negotiating with weakness and ready to train, eat, and live with intent then Join our 2026 protocols .</p>
-            <button>Contact</button>
-        </section>
-        <section class="about">
-            <section class="about1">
-                <img src="./download (1).jpg" height="400px" width="600px"/>
-            </section>
-            <section class="about2">
-                <h1>About Us</h1>
-                <p class="para">2026 is the year for structure, discipline, and execution. If you are done negotiating with weakness and ready to train, eat, and live with intent then Join our 2026 protocols </p>
-                <button>Contact</button>
-            </section>
-        </section>
-        <section class="section2">
-            <section class="section3">
-                <img src="./download (2).jpg" alt="men's health" height="200px" width="200px"/>
-                <h1>MEN'S HEALTH AND WELLNESS</h1>
-            </section>
-            <section class="section4">
-                <h1>BIO</h1>
-                <P>
-                    Amerix is a reproductive health specialist who promotes a holistic approach to the wellness and welfare of men. Through my unique wellness plans that promote men's health, I have helped men regain their health, pride, self-esteem and a sense of masculinity.
-                </P>
-                <button>Better Together</button>
-            </section>
-        </section>
-        <section>
-            <section>
-                <h1>Book Clinics</h1>
-                <button>Book a Clinic</button>
-            </section>
-            <section>
-                <img />
-            </section>
-        </section>
-        <section class="section10">
-            <section class="section11">
-                <img/>
-                <h1>Diabetes/Hypertension Clinic</h1>
-                <p>Regain control of your sugar, pressure, and health.</p>
-            </section>
-            <section class="section11">
-                <img/>
-                <h1>Nutrition Clinic</h1>
-                <p>Confidential care to restore vitality and confidence.</p>
-            </section>
-            <section class="section11">
-                <img/>
-                <h1>Nutrition Clinic</h1>
-                <p>Eat smart, live strong, thrive daily.</p>
-            </section>
-        </section>
-        <section>
-            <section>
-                <h1>You Are In Safe Hands</h1>
-                <P>Tens of thousands of people have trusted Amerix with their healthcare needs.</P>
-                <ul>
-                    <li>Data security Patient notes are encrypted & data storage is audited by independent bodies to maintain safety </li>
-                    <li>Confidentiality our consultations remain completely confidential between you and your medical consultant. </li>
-                    <li>100% online Fully private, online consultations (no awkwardly waiting for your turn at the practice, no judgement) at your convenience.</li>
-                </ul>
-            </section>
-            <section id="contact" class="contact-section">
-    <div class="container">
-      <h2 class="section-title">Contact Me</h2>
 
-      <div class="contact-content">
-        <!-- Left - Info -->
-        <div class="contact-info">
-          <h3 class="info-title">Let's Get In Touch</h3>
-          <p class="info-text">
-            I'm open to discussing web development projects or partnership opportunities.
+  <!-- ═══════════════ HEADER / NAV ═══════════════ -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#" class="nav__logo" aria-label="Amerix Home">AMERIX</a>
+
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__list" id="nav-menu" role="list">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#clinics">Clinics</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════ HERO ═══════════════════════ -->
+    <section class="hero" id="hero" aria-label="Hero section">
+      <div class="container">
+        <div class="hero__inner">
+          <p class="hero__eyebrow">Men's Health &amp; Wellness · Est. 2026</p>
+          <h1 class="hero__title">
+            Done<br>
+            <em>Negotiating</em><br>
+            with Weakness.
+          </h1>
+          <p class="hero__lead">
+            2026 is the year for structure, discipline, and execution.
+            If you're ready to train, eat, and live with intent — join the protocol.
           </p>
-
-          <div class="contact-item">
-            <i class="fas fa-envelope"></i>
-            <span>duncankipkoech12@gmail.com</span>
+          <div class="hero__cta">
+            <a href="#contact" class="btn btn-solid">Join the Protocol</a>
+            <a href="#about" class="btn">Learn More</a>
           </div>
-
-          <div class="contact-item">
-            <i class="fas fa-phone"></i>
-            <span>+254 769 930 350</span>
-          </div>
-
-          <div class="contact-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <span>Nairobi, Kenya</span>
-          </div>
-        </div>
-
-        <!-- Right - Form -->
-        <div class="contact-form-wrapper">
-          <form class="contact-form">
-            <div class="form-group">
-              <label for="name">Your Name</label>
-              <input 
-                type="text" 
-                id="name" 
-                placeholder="Enter Your Name" 
-                required
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email <span class="required">*</span></label>
-              <input 
-                type="email" 
-                id="email" 
-                placeholder="Enter Your Email" 
-                required
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea 
-                id="message" 
-                rows="5" 
-                placeholder="Enter Your Message"
-              ></textarea>
-            </div>
-
-            <div class="form-submit">
-              <button type="submit" class="submit-btn">SEND</button>
-            </div>
-          </form>
         </div>
       </div>
-    </div>
-  </section>
-        </section>
-        <footer class="footer">
-            <h1>Raizy</h1>
-            <p>All rights Reserved©  | Raizy 2026</p>
-            <p>All rights Reserved©  | Raizy 2026</p>
-        </footer>
-     </article>
-    </main>
-    
+    </section>
+
+    <!-- ═══════════════ ABOUT ══════════════════════ -->
+    <section class="about" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about__grid fade-up">
+          <figure class="about__img-wrap">
+            <img
+              src="./download (1).jpg"
+              alt="Amerix — men's wellness coaching"
+              loading="lazy"
+            />
+          </figure>
+          <div class="about__content">
+            <span class="section-tag">Our mission</span>
+            <h2 id="about-heading">About Us</h2>
+            <div class="divider" role="presentation"></div>
+            <p>
+              2026 is the year for structure, discipline, and execution.
+              If you are done negotiating with weakness and ready to train,
+              eat, and live with intent — join our 2026 protocols.
+            </p>
+            <a href="#contact" class="btn">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ BIO ════════════════════════ -->
+    <section class="bio" id="bio" aria-labelledby="bio-heading">
+      <div class="container">
+        <div class="bio__grid fade-up">
+          <figure class="bio__img-wrap">
+            <img
+              src="./download (2).jpg"
+              alt="Amerix – reproductive health specialist"
+              loading="lazy"
+            />
+          </figure>
+          <div class="bio__content">
+            <span class="section-tag">Who I am</span>
+            <h2 id="bio-heading">Men's Health<br>&amp; Wellness</h2>
+            <div class="divider" role="presentation"></div>
+            <p>
+              Amerix is a reproductive health specialist who promotes a holistic
+              approach to the wellness and welfare of men. Through unique wellness
+              plans, he has helped men regain their health, pride, self-esteem,
+              and sense of masculinity.
+            </p>
+            <a href="#clinics" class="btn btn-solid">Better Together</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ CLINICS ════════════════════ -->
+    <section class="clinics" id="clinics" aria-labelledby="clinics-heading">
+      <div class="container">
+        <header class="clinics__header fade-up">
+          <span class="section-tag">Services</span>
+          <h2 id="clinics-heading">Book a Clinic</h2>
+          <div class="divider" style="margin-inline: auto;" role="presentation"></div>
+        </header>
+
+        <ul class="clinics__grid" role="list">
+          <li class="clinic-card fade-up">
+            <div class="clinic-card__icon" aria-hidden="true">
+              <i class="fas fa-heartbeat"></i>
+            </div>
+            <h3>Diabetes / Hypertension</h3>
+            <p>Regain control of your sugar, pressure, and long-term health.</p>
+          </li>
+          <li class="clinic-card fade-up">
+            <div class="clinic-card__icon" aria-hidden="true">
+              <i class="fas fa-shield-heart"></i>
+            </div>
+            <h3>Sexual Health</h3>
+            <p>Confidential care to restore vitality and confidence.</p>
+          </li>
+          <li class="clinic-card fade-up">
+            <div class="clinic-card__icon" aria-hidden="true">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <h3>Nutrition Clinic</h3>
+            <p>Eat smart, live strong, and thrive every single day.</p>
+          </li>
+        </ul>
+
+        <p style="text-align:center; margin-top: 2.5rem;">
+          <a href="#contact" class="btn btn-solid">Book a Clinic</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════════════ TRUST ══════════════════════ -->
+    <section class="trust" id="trust" aria-labelledby="trust-heading">
+      <div class="container">
+        <div class="trust__grid fade-up">
+          <div class="trust__content">
+            <span class="section-tag">Why choose us</span>
+            <h2 id="trust-heading">You Are in Safe Hands</h2>
+            <div class="divider" role="presentation"></div>
+            <p>Tens of thousands of people have trusted Amerix with their healthcare needs.</p>
+          </div>
+
+          <ul class="trust__list" role="list">
+            <li class="trust__item">
+              <i class="fas fa-lock" aria-hidden="true"></i>
+              <p><strong>Data Security</strong> — Patient notes are encrypted &amp; storage is audited by independent bodies.</p>
+            </li>
+            <li class="trust__item">
+              <i class="fas fa-user-shield" aria-hidden="true"></i>
+              <p><strong>Confidentiality</strong> — Consultations remain completely confidential between you and your consultant.</p>
+            </li>
+            <li class="trust__item">
+              <i class="fas fa-globe" aria-hidden="true"></i>
+              <p><strong>100% Online</strong> — Fully private online consultations, no waiting room, no judgement, at your convenience.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ CONTACT ════════════════════ -->
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact__grid fade-up">
+
+          <!-- Info -->
+          <address class="contact__info" style="font-style:normal;">
+            <span class="section-tag">Get in touch</span>
+            <h2 id="contact-heading">Let's Talk</h2>
+            <div class="divider" role="presentation"></div>
+            <p>Open to discussing wellness programmes, partnerships, or any questions about your health journey.</p>
+
+            <div class="contact__detail">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+              <a href="mailto:duncankipkoech12@gmail.com">duncankipkoech12@gmail.com</a>
+            </div>
+            <div class="contact__detail">
+              <i class="fas fa-phone" aria-hidden="true"></i>
+              <a href="tel:+254769930350">+254 769 930 350</a>
+            </div>
+            <div class="contact__detail">
+              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              <span>Nairobi, Kenya</span>
+            </div>
+          </address>
+
+          <!-- Form -->
+          <div class="contact__form-wrapper">
+            <form class="contact__form" novalidate aria-label="Contact form">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required autocomplete="name" />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email <span class="required" aria-label="required">*</span></label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required autocomplete="email" />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Enter your message"></textarea>
+              </div>
+
+              <div>
+                <button type="submit" class="btn btn-solid" style="width:100%; justify-content:center;">Send Message</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════ FOOTER ═════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <p class="site-footer__logo">Raizy</p>
+    <p>All rights reserved &copy; Raizy 2026</p>
+  </footer>
+
+  <!-- ═══════════════ SCRIPTS ════════════════════ -->
+  <script src="codveda.js"></script>
+
 </body>
 </html>
